@@ -10,13 +10,19 @@ extends Node3D
 @export var min_room_size : int = 2 
 @export var max_room_size : int = 4
 @export_range(0,1) var extraPathChance : float = 0.75
+@export_multiline var custom_seed : String = "" : set = set_seed 
 var room_tiles : Array[PackedVector3Array] = []
 var room_positions : PackedVector3Array = []
 
 
 func set_start(val:bool)->void: 
-	generate()
-	
+	if Engine.is_editor_hint():
+		generate()
+
+func set_seed(val:String)->void:
+	custom_seed = val
+	seed(val.hash())
+
 func set_border(val:int)->void: 
 	borderSize=val
 	if Engine.is_editor_hint():
@@ -148,6 +154,7 @@ func create_hallways(hallway_graph:AStar2D):
 	astar.update()
 	astar.diagonal_mode = AStarGrid2D.DIAGONAL_MODE_NEVER
 	astar.default_estimate_heuristic = AStarGrid2D.HEURISTIC_MANHATTAN
+	#define obstacle tiles
 	for t in gridMap.get_used_cells_by_item(0):
 		astar.set_point_solid(Vector2i(t.x,t.z))
 	var _t : int = 0
