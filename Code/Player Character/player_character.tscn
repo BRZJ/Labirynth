@@ -14,6 +14,29 @@ var SPEED = 5.0
 const JUMP_VELOCITY = 20
 const SENSITIVITY = 0.004
 
+#Set the new position, ALLOWS TELEPORTING FOR SPAWNING / FALLING OFF THE MAP 
+func setPlayerPosition(val:Vector3): # SET PLAYER POSITION
+
+	self.transform.origin = val
+	#print(\"Set Player Position Debugging: -\")
+	#print(getPosition_process())
+
+#Allows for checks later in the game. 
+func getPosition_process()->Vector3:
+	 #Check if the character reference is valid
+	if self:
+		#Access the transform of the CharacterBody3D
+		var character_transform = self.transform
+		#Get the world coordinates of the CharacterBody3D
+		var character_position = character_transform.origin
+		#Print or use the coordinates as neede
+		#print(\"Character Position: \", character_position)
+		return Vector3(character_position)
+
+	else:
+		print(\"Character not found.\")
+		return Vector3.ZERO
+
 func _unhandled_input(event):
 	# allows to turn off input when game window is not active
 	if event is InputEventMouseButton:
@@ -53,8 +76,6 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
-		print(\"vx\")
-		print(velocity.x)
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
@@ -67,28 +88,6 @@ func _physics_process(delta):
 #@onready var camera_start_pos: Vector3 = camera.position
 #ar camera_max_height: float = 4.0
 
-#func setPlayerPosition(val:Vector3): # SET PLAYER POSITION
-#Set the new position
-	#self.transform.origin = val
-	#rint(\"Set Player Position Debugging: -\")
-	#print(getPosition_process())
-
-
-#func getPosition_process()->Vector3:
-	# Check if the character reference is valid
-	#if self:
-		# Access the transform of the CharacterBody3D
-		#var character_transform = self.transform
-
-		# Get the world coordinates of the CharacterBody3D
-		#var character_position = character_transform.origin
-		# Print or use the coordinates as neede
-		#print(\"Character Position: \", character_position)
-		#return Vector3(character_position)
-
-	#else:
-		#print(\"Character not found.\")
-		#return Vector3.ZERO
 "
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_d746p"]
