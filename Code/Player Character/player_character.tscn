@@ -7,59 +7,35 @@ script/source = "extends CharacterBody3D
 var gravity = ProjectSettings.get_setting(\"physics/3d/default_gravity\")
 var gravity_multiplier: float = 4.0
 
-@onready var neck := $Node3D
-@onready var camera := $Node3D/Camera3D
-var playerCharacterPosition : Vector3 : set = setPlayerPosition
+@onready var neck := $Neck
+@onready var camera := $Neck/Camera3D
+
 var SPEED = 5.0
 const JUMP_VELOCITY = 20
 const SENSITIVITY = 0.004
 
-@onready var camera_start_pos: Vector3 = camera.position
-var camera_max_height: float = 4.0
-
-func setPlayerPosition(val:Vector3): # SET PLAYER POSITION
-#Set the new position
-	self.transform.origin = val
-	print(\"Set Player Position Debugging: -\")
-	print(getPosition_process())
-
-
-func getPosition_process()->Vector3:
-	# Check if the character reference is valid
-	if self:
-		# Access the transform of the CharacterBody3D
-		var character_transform = self.transform
-
-		# Get the world coordinates of the CharacterBody3D
-		var character_position = character_transform.origin
-		# Print or use the coordinates as neede
-		print(\"Character Position: \", character_position)
-		return Vector3(character_position)
-
-	else:
-		print(\"Character not found.\")
-		return Vector3.ZERO
-
-
 func _unhandled_input(event):
+	# allows to turn off input when game window is not active
 	if event is InputEventMouseButton:
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	elif event.is_action_pressed(\"ui_cancel\"):
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		
-	if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+	# Handles mouse and neck rotation with clamped values so camera wont 360 on x axis.
+	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		if event is InputEventMouseMotion:
-			rotate_y(-event.relative.x * 0.005)
-			#camera.(event.relative.y * 0.01)
-			camera.translate(Vector3(0, event.relative.y * 0.01, 0))
+			neck.rotate_y(-event.relative.x * 0.005)
+			camera.rotate_x(-event.relative.y * 0.005)
+			camera.rotation_degrees.x = clamp(camera.rotation_degrees.x, -60, 60)
 			
-			if camera.position.y > camera_max_height:
-				camera.position.y = camera_max_height
-			elif camera.position.y < -camera_max_height:
-				camera.position.y = -camera_max_height
-			
-			camera.position = Vector3(camera_start_pos.x, camera.position.y, camera_start_pos.z) 
-			camera.look_at(position)
+			# Unused code bits, left in case. 
+			#camera.translate(Vector3(0, event.relative.y * 0.01, 0))
+			#if camera.position.y > camera_max_height:
+				#camera.position.y = camera_max_height
+			#elif camera.position.y < -camera_max_height:
+				#camera.position.y = -camera_max_height
+			#camera.position = Vector3(camera_start_pos.x, camera.position.y, camera_start_pos.z) 
+			#camera.look_at(position)
 
 
 
@@ -73,7 +49,7 @@ func _physics_process(delta):
 
 	# Get the input direction and handle the movement/deceleration.
 	var input_dir = Input.get_vector(\"ui_left\", \"ui_right\", \"ui_up\", \"ui_down\")
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	var direction = (neck.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
@@ -84,6 +60,35 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+# Code that was left from cleaning up, left it in case it did something other
+# than controlling the character and camera.  
+#var playerCharacterPosition : Vector3 : set = setPlayerPosition
+#@onready var camera_start_pos: Vector3 = camera.position
+#ar camera_max_height: float = 4.0
+
+#func setPlayerPosition(val:Vector3): # SET PLAYER POSITION
+#Set the new position
+	#self.transform.origin = val
+	#rint(\"Set Player Position Debugging: -\")
+	#print(getPosition_process())
+
+
+#func getPosition_process()->Vector3:
+	# Check if the character reference is valid
+	#if self:
+		# Access the transform of the CharacterBody3D
+		#var character_transform = self.transform
+
+		# Get the world coordinates of the CharacterBody3D
+		#var character_position = character_transform.origin
+		# Print or use the coordinates as neede
+		#print(\"Character Position: \", character_position)
+		#return Vector3(character_position)
+
+	#else:
+		#print(\"Character not found.\")
+		#return Vector3.ZERO
 "
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_d746p"]
@@ -96,10 +101,10 @@ points = PackedVector3Array(-0.125207, -0.532801, -0.480507, 0.0227831, 0.47607,
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
 script = SubResource("GDScript_rkl21")
 
-[node name="Node3D" type="Node3D" parent="CharacterBody3D"]
+[node name="Neck" type="Node3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
 
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Node3D"]
-transform = Transform3D(0.999804, 0, -0.0198082, 0, 1, 0, 0.0198082, 0, 0.999804, 0.00653697, 1.41681, -0.329949)
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Neck"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
