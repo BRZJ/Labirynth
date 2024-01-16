@@ -41,26 +41,7 @@ func getPosition_process()->Vector3:
 		return Vector3.ZERO
 
 
-func _unhandled_input(event):
-	if event is InputEventMouseButton:
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	elif event.is_action_pressed(\"ui_cancel\"):
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-		
-	if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-		if event is InputEventMouseMotion:
-			rotate_y(-event.relative.x * 0.005)
-			#camera.(event.relative.y * 0.01)
-			camera.translate(Vector3(0, event.relative.y * 0.01, 0))
-			
-			if camera.position.y > camera_max_height:
-				camera.position.y = camera_max_height
-			elif camera.position.y < -camera_max_height:
-				camera.position.y = -camera_max_height
-			
-			camera.position = Vector3(camera_start_pos.x, camera.position.y, camera_start_pos.z) 
-			camera.look_at(position)
-
+###################### insert camera code here
 
 
 func _physics_process(delta):

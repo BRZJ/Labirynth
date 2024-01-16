@@ -6,13 +6,40 @@ extends Node3D
 @export var borderSize : int = 5 : set = set_border
 @export var room_number : int = 4
 @export var room_margin : int = 1 #min distance between rooms 
-@export var room_recursion : int = 15
+@export var room_recursion : int = 5
 @export var min_room_size : int = 2 
 @export var max_room_size : int = 4
+@export var boss_room_size : int = 6
 @export_range(0,1) var extraPathChance : float = 0.75
-@export_multiline var custom_seed : String = "" : set = set_seed 
+@export_multiline var custom_seed : String = "15031503" : set = set_seed 
 var room_tiles : Array[PackedVector3Array] = []
 var room_positions : PackedVector3Array = []
+
+#BorderSize SET GET
+func getBorderSize()->int:
+	return self.borderSize
+func setBorderSize(val : int) -> void:
+	borderSize = val
+	print("BorderSize Debug:")
+	print(borderSize)
+
+#room_number SET GET
+func getRoom_Number()->int:
+	return self.room_number
+func setRoom_number(val : int) -> void:
+	room_number = val
+	print("Room_number Debug:")
+	print(room_number)
+
+#room_positions  GET
+func getRoomPos()->PackedVector3Array:
+	print("room positions debug:")
+	print(room_positions)
+	return room_positions
+
+
+
+
 
 
 func set_start(val:bool)->void: 

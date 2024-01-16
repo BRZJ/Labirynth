@@ -8,8 +8,7 @@
 script = ExtResource("1_j23ix")
 
 [node name="Labyrinth" parent="." instance=ExtResource("2_byroc")]
-borderSize = 50
-room_number = 150
+boss_room_size = 6
 
 [node name="Player Character" parent="Labyrinth" instance=ExtResource("3_o7jgm")]
 transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 14.795, 1.01976, 3.67705)

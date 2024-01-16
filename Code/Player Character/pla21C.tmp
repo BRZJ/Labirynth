@@ -3,26 +3,25 @@
 [sub_resource type="GDScript" id="GDScript_rkl21"]
 script/source = "extends CharacterBody3D
 
-#Get the gravity from the project settings to be synced with RigidBody nodes.
+# Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting(\"physics/3d/default_gravity\")
-var gravity_multiplier: float = 4.0
 
 @onready var neck := $Node3D
 @onready var camera := $Node3D/Camera3D
 var playerCharacterPosition : Vector3 : set = setPlayerPosition
-var SPEED = 5.0
-const JUMP_VELOCITY = 20
+const SPEED = 5.0
+const JUMP_VELOCITY = 4.5
 const SENSITIVITY = 0.004
 
 @onready var camera_start_pos: Vector3 = camera.position
 var camera_max_height: float = 4.0
 
 func setPlayerPosition(val:Vector3): # SET PLAYER POSITION
-#Set the new position
+# Set the new position
 	self.transform.origin = val
 	print(\"Set Player Position Debugging: -\")
 	print(getPosition_process())
-
+	
 
 func getPosition_process()->Vector3:
 	# Check if the character reference is valid
@@ -35,50 +34,62 @@ func getPosition_process()->Vector3:
 		# Print or use the coordinates as neede
 		print(\"Character Position: \", character_position)
 		return Vector3(character_position)
-
+		
 	else:
 		print(\"Character not found.\")
 		return Vector3.ZERO
 
 
-func _unhandled_input(event):
-	if event is InputEventMouseButton:
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	elif event.is_action_pressed(\"ui_cancel\"):
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
+# Reference to the CharacterBody3D
+
+
+# Sensitivity for camera panning
+var pan_sensitivity : float = 0.1
+
+# Function to update the camera position based on the character's position
+func updateCameraPosition() -> void:
+	if self:
+		# Adjust the camera position based on the character's position
+		var new_camera_position = self.transform.origin + Vector3(0, 5, -10)
+		self.translation = new_camera_position
+	else:
+			print(\"CharacterBody3D not found.\")
+
+# Process function to continuously update the camera position
+func _process(delta: float) -> void:
+	updateCameraPosition()
+	
+	# Add additional logic for camera controls if needed
+	# For example, you can use user input to pan the camera
+	if Input.is_action_pressed(\"pan_left\"):
+		self.translate(Vector3(-pan_sensitivity, 0, 0))
+	elif Input.is_action_pressed(\"pan_right\"):
+		self.translate(Vector3(pan_sensitivity, 0, 0))
+	if Input.is_action_pressed(\"pan_up\"):
+		self.translate(Vector3(0, 0, -pan_sensitivity))
+	elif Input.is_action_pressed(\"pan_down\"):
+		self.translate(Vector3(0, 0, pan_sensitivity))
+
 		
-	if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-		if event is InputEventMouseMotion:
-			rotate_y(-event.relative.x * 0.005)
-			#camera.(event.relative.y * 0.01)
-			camera.translate(Vector3(0, event.relative.y * 0.01, 0))
-			
-			if camera.position.y > camera_max_height:
-				camera.position.y = camera_max_height
-			elif camera.position.y < -camera_max_height:
-				camera.position.y = -camera_max_height
-			
-			camera.position = Vector3(camera_start_pos.x, camera.position.y, camera_start_pos.z) 
-			camera.look_at(position)
-
-
 
 func _physics_process(delta):
+	
 	# Add the gravity.
 	if not is_on_floor():
-		velocity.y -= gravity * delta * gravity_multiplier
+		velocity.y -= gravity * delta
+
 	# Handle jump.
 	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
-	var input_dir = Input.get_vector(\"ui_left\", \"ui_right\", \"ui_up\", \"ui_down\")
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var input_dir = Input.get_vector(\"left\", \"right\", \"forward\", \"back\")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
-		print(\"vx\")
-		print(velocity.x)
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)

@@ -4,3 +4,5 @@ extends Node3D
 @onready var player := $"Labyrinth/Player Character"
 var playerCoords := Vector3()
 
+
+
