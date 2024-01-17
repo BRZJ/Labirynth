@@ -13,11 +13,6 @@ data = PackedVector3Array(25, 0, 25, -25, 0, 25, 25, 0, -25, -25, 0, 25, -25, 0,
 
 [node name="Labyrinth" type="Node3D"]
 script = ExtResource("1_56723")
-start = true
-borderSize = 50
-room_number = 3
-room_recursion = 1
-custom_seed = ""
 
 [node name="LabyrinthMap" type="GridMap" parent="."]
 mesh_library = ExtResource("2_v61wu")

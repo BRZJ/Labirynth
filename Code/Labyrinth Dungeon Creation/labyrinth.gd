@@ -2,16 +2,16 @@
 extends Node3D
 
 @onready var gridMap: GridMap = null
-@export var start : bool = false : set = set_start 
-@export var borderSize : int = 5 : set = set_border
-@export var room_number : int = 4
-@export var room_margin : int = 1 #min distance between rooms 
-@export var room_recursion : int = 5
-@export var min_room_size : int = 2 
-@export var max_room_size : int = 4
-@export var boss_room_size : int = 6
-@export_range(0,1) var extraPathChance : float = 0.75
-@export_multiline var custom_seed : String = "15031503" : set = set_seed 
+var start : set = set_start 
+var borderSize  : set = set_border
+var room_number 
+var room_margin : int = 1 #min distance between rooms 
+var room_recursion : int = 5
+var min_room_size : int = 2 
+var max_room_size : int = 4
+var boss_room_size : int = 6
+var extraPathChance : float = 0.75
+var custom_seed : String = "15031503" : set = set_seed 
 var room_tiles : Array[PackedVector3Array] = []
 var room_positions : PackedVector3Array = []
 
@@ -46,7 +46,8 @@ func set_start(val:bool)->void:
 	start = val
 	print("set_start")
 	print(start)
-	if Engine.is_editor_hint():
+	setGridMap()
+	if borderSize != null:
 		print("Set start generate")
 		generate()
 
@@ -56,13 +57,7 @@ func set_seed(val:String)->void:
 
 func set_border(val:int)->void: 
 	borderSize=val
-	if gridMap != null:
-		print("set_border() -> border = null")
-		gridMap.clear()
-	else:
-		print("set_border() -> border != null")
-		if Engine.is_editor_hint():
-			visualizeBorder()
+
 
 #Generating rooms
 func generate():
