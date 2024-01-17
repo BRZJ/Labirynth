@@ -1,7 +1,7 @@
 @tool
 extends Node3D
 
-@onready var gridMap: GridMap = $LabyrinthMap
+@onready var gridMap: GridMap = null
 @export var start : bool = false : set = set_start 
 @export var borderSize : int = 5 : set = set_border
 @export var room_number : int = 4
@@ -31,6 +31,10 @@ func setRoom_number(val : int) -> void:
 	print("Room_number Debug:")
 	print(room_number)
 
+func setGridMap():
+	gridMap  = $LabyrinthMap
+	print("Map Set")
+	
 #room_positions  GET
 func getRoomPos()->PackedVector3Array:
 	print("room positions debug:")
@@ -38,12 +42,12 @@ func getRoomPos()->PackedVector3Array:
 	return room_positions
 
 
-
-
-
-
 func set_start(val:bool)->void: 
+	start = val
+	print("set_start")
+	print(start)
 	if Engine.is_editor_hint():
+		print("Set start generate")
 		generate()
 
 func set_seed(val:String)->void:
@@ -52,8 +56,13 @@ func set_seed(val:String)->void:
 
 func set_border(val:int)->void: 
 	borderSize=val
-	if Engine.is_editor_hint():
-		visualizeBorder()
+	if gridMap != null:
+		print("set_border() -> border = null")
+		gridMap.clear()
+	else:
+		print("set_border() -> border != null")
+		if Engine.is_editor_hint():
+			visualizeBorder()
 
 #Generating rooms
 func generate():

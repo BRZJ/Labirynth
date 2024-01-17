@@ -29,6 +29,7 @@ func init_Game_Menu():
 	# Close Game
 	
 	#IF USER PRESSES START: 
+	labyrinth.setGridMap()
 	if gameDifficulty == 0:
 		labyrinth.setBorderSize(10)
 		labyrinth.setRoom_number(8)
