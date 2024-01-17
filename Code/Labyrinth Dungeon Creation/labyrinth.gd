@@ -20,35 +20,36 @@ func getBorderSize()->int:
 	return self.borderSize
 func setBorderSize(val : int) -> void:
 	borderSize = val
-	print("BorderSize Debug:")
-	print(borderSize)
+	#print("BorderSize Debug:")
+	#print(borderSize)
 
 #room_number SET GET
 func getRoom_Number()->int:
 	return self.room_number
 func setRoom_number(val : int) -> void:
 	room_number = val
-	print("Room_number Debug:")
-	print(room_number)
+	#print("Room_number Debug:")
+	#print(room_number)
 
 func setGridMap():
 	gridMap  = $LabyrinthMap
-	print("Map Set")
+	#print("Map Set")
 	
 #room_positions  GET
 func getRoomPos()->PackedVector3Array:
-	print("room positions debug:")
-	print(room_positions)
+	#print("room positions debug:")
+	#print(room_positions)
 	return room_positions
+
 
 
 func set_start(val:bool)->void: 
 	start = val
-	print("set_start")
-	print(start)
+	#print("set_start")
+	#print(start)
 	setGridMap()
 	if borderSize != null:
-		print("Set start generate")
+		#print("Set start generate")
 		generate()
 
 func set_seed(val:String)->void:
@@ -200,7 +201,4 @@ func create_hallways(hallway_graph:AStar2D):
 			if gridMap.get_cell_item(pos) <0:
 				gridMap.set_cell_item(pos,1)
 		if _t%16 == 15: await  get_tree().create_timer(0).timeout
-	
-	
-	
-	
+
