@@ -9,7 +9,8 @@ var room_margin : int = 1 #min distance between rooms
 var room_recursion : int = 5
 var min_room_size : int = 2 
 var max_room_size : int = 4
-var boss_room_size : int = 6
+var min_boss_room_size  
+var max_boss_room_size 
 var extraPathChance : float = 0.75
 var custom_seed : String = "15031503" : set = set_seed 
 var room_tiles : Array[PackedVector3Array] = []
@@ -41,8 +42,6 @@ func getRoomPos()->PackedVector3Array:
 	#print(room_positions)
 	return room_positions
 
-
-
 func set_start(val:bool)->void: 
 	start = val
 	#print("set_start")
@@ -59,11 +58,20 @@ func set_seed(val:String)->void:
 func set_border(val:int)->void: 
 	borderSize=val
 
-
+func set_min_boss_room_size(val:int)->void:
+	min_boss_room_size = val
+	
+func set_max_boss_room_size(val:int)->void:
+	max_boss_room_size = val
+#---------------------------------------------------------------------------------------------------
 #Generating rooms
 func generate():
 	visualizeBorder()
 	for i in room_number:
+		if i == 0:
+			#print("boss room number i")
+			#print(i)
+			create_BossRoom()
 		create_room(room_recursion)
 	var rpv2 : PackedVector2Array = []
 	var del_graph : AStar2D = AStar2D.new()  #deloney graph for min spanning tree
@@ -144,7 +152,7 @@ func create_room(rec:int):
 	for r in range(-room_margin,height+room_margin):
 		for c in range(-room_margin,width+room_margin):
 			var pos : Vector3i = start_pos + Vector3i(c,0,r)
-			if gridMap.get_cell_item(pos) == 0:
+			if gridMap.get_cell_item(pos) == 0 or gridMap.get_cell_item(pos) == 4:
 				create_room(rec-1)
 				return
 	
@@ -158,6 +166,43 @@ func create_room(rec:int):
 	var avg_x : float = start_pos.x + (float(width)/2)
 	var avg_z : float = start_pos.z + (float(height)/2)
 	var pos : Vector3 = Vector3(avg_x,0,avg_z)
+	room_positions.append(pos)
+
+func create_BossRoom():
+	#print("------------------------------------------------------")
+	#print("create boss room")
+	var boss_room_width : int = (randi() % (max_boss_room_size - min_boss_room_size)) + min_boss_room_size
+	var boss_room_height : int =(randi() % (max_boss_room_size - min_boss_room_size)) + min_boss_room_size
+	#print("boss_room_height", boss_room_height)
+	#print("boss_room_width", boss_room_width)
+	
+	var start_pos : Vector3i 
+	
+	start_pos.x = randi() % ((borderSize - boss_room_width) + 1)
+	start_pos.z = randi() % ((borderSize - boss_room_height) + 1)
+	#print("Boss room start pos x ",start_pos.x)
+	#print("Boss room start pos z ",start_pos.z)
+	
+	#no room overlapping
+	for r in range(-room_margin,boss_room_height+room_margin):
+		for c in range(-room_margin,boss_room_width+room_margin):
+			var pos : Vector3i = start_pos + Vector3i(c,0,r)
+			#print("gridMap.get_cell_item(pos) : ", gridMap.get_cell_item(pos))
+			if gridMap.get_cell_item(pos) == 0:
+				create_room(1)
+				return
+
+	var room : PackedVector3Array = []
+	for r1 in boss_room_height:
+		for c1 in boss_room_width:
+			var pos : Vector3i = start_pos + Vector3i(c1,0,r1)
+			gridMap.set_cell_item(pos,4)
+			room.append(pos)
+	room_tiles.append(room)
+	var avg_x : float = start_pos.x + (float(boss_room_width)/2)
+	var avg_z : float = start_pos.z + (float(boss_room_height)/2)
+	var pos : Vector3 = Vector3(avg_x,0,avg_z)
+	#print("boss room pos", pos)
 	room_positions.append(pos)
 
 func create_hallways(hallway_graph:AStar2D):

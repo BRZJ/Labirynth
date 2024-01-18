@@ -33,9 +33,9 @@ func init_Game_Menu():
 	# SETTINGS: 1. Controls:  A: WASD <DEFAULT> B. Arrows
 	#           2. Window Settings
 	#           3. Camera Sensitivity   <DEFAULT = 0.004>
-	# START GAME: Difficulty: A. Easy   10x10 start     <DEFAULT>
-	#                         B. Medium 25x25 start
-	#                         C. Hard   35x35 start
+	# START GAME: Difficulty: A. Easy   15x15 start     <DEFAULT>  boss room size 4x4
+	#                         B. Medium 25x25 start                boss room size 6x6
+	#                         C. Hard   35x35 start                boss room size 8x8
 	# Load Seed   <later in development cycle>
 	# Link to Github 
 	# Close Game
@@ -44,8 +44,10 @@ func init_Game_Menu():
 	
 	if gameDifficulty == 0:
 		#print("Game Diff 0")
-		labyrinth.setBorderSize(10)      # border is required to be set before and after start 
+		labyrinth.setBorderSize(15)      # border is required to be set before and after start 
 		labyrinth.setRoom_number(6)      # or else it will not generate a new map of that size on launch
+		labyrinth.set_min_boss_room_size(4)
+		labyrinth.set_max_boss_room_size(5)
 		labyrinth.set_start(true)
 		labyrinth.setBorderSize(10)
 		
@@ -53,12 +55,16 @@ func init_Game_Menu():
 		#print("Game Diff 1")
 		labyrinth.setBorderSize(25)
 		labyrinth.setRoom_number(16)
+		labyrinth.set_min_boss_room_size(6)
+		labyrinth.set_max_boss_room_size(7)
 		labyrinth.set_start(true)
 		labyrinth.setBorderSize(15)
 	elif gameDifficulty == 2:
 		#print("Game Diff 2")
 		labyrinth.setBorderSize(35)
 		labyrinth.setRoom_number(25)
+		labyrinth.set_min_boss_room_size(8)
+		labyrinth.set_max_boss_room_size(9)
 		labyrinth.set_start(true)
 		labyrinth.setBorderSize(25)
 	else:
