@@ -15,12 +15,15 @@ var extraPathChance : float = 0.75
 var custom_seed : String = "15031503" : set = set_seed 
 var room_tiles : Array[PackedVector3Array] = []
 var room_positions : PackedVector3Array = []
+var inBossRoom 
+
 
 #BorderSize SET GET
 func getBorderSize()->int:
 	return self.borderSize
 func setBorderSize(val : int) -> void:
-	borderSize = val
+	if val < 50:
+		borderSize = val
 	#print("BorderSize Debug:")
 	#print(borderSize)
 
@@ -35,6 +38,11 @@ func setRoom_number(val : int) -> void:
 func setGridMap():
 	gridMap  = $LabyrinthMap
 	#print("Map Set")
+	
+func get_inBossRoom()->bool:
+	return self.inBossRoom
+func set_inBossRoom(val : bool) -> void:
+	inBossRoom = val
 	
 #room_positions  GET
 func getRoomPos()->PackedVector3Array:
@@ -66,6 +74,7 @@ func set_max_boss_room_size(val:int)->void:
 #---------------------------------------------------------------------------------------------------
 #Generating rooms
 func generate():
+	
 	visualizeBorder()
 	for i in room_number:
 		if i == 0:

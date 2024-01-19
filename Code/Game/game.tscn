@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhcpy3c7b6eqk"]
+[gd_scene load_steps=5 format=3 uid="uid://dhcpy3c7b6eqk"]
 
 [ext_resource type="Script" path="res://Game/Game.gd" id="1_j23ix"]
 [ext_resource type="PackedScene" uid="uid://dubhea1ehbsal" path="res://Labyrinth Dungeon Creation/labyrinth.tscn" id="2_byroc"]
 [ext_resource type="PackedScene" uid="uid://cqwkwn4cd4bsl" path="res://Player Character/player_character.tscn" id="3_o7jgm"]
+[ext_resource type="Script" path="res://Game/LabyrinthExpansionTimer.gd" id="4_6ra4y"]
 
 [node name="Game" type="Node3D"]
 script = ExtResource("1_j23ix")
@@ -18,3 +19,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.269609, 1.18747, 3.67705)
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
 transform = Transform3D(0.843392, -0.235537, 0.482921, 0, 0.898794, 0.438372, -0.537299, -0.369719, 0.758035, 0, 36, 0)
 shadow_enabled = true
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 10.0
+autostart = true
+script = ExtResource("4_6ra4y")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
