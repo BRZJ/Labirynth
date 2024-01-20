@@ -10,9 +10,9 @@ var playerWindowSettings = null
 var playerSensitivity = 0.004
 
 
-var gameDifficulty = 0   # (0, Easy)(1, Medium)(2, Hard)
+var gameDifficulty = 2  # (0, Easy)(1, Medium)(2, Hard)
 
-var maxRoomNumber = 150    # ---- MAX ROOMS FOR A 50X50 AREA
+var maxRoomNumber = 120    # ---- MAX ROOMS FOR A 50X50 AREA
 var githubLink = null
 var expansion
 var easyWaitTimeExtension = 6
@@ -29,13 +29,10 @@ func _ready():
 func spawnPlayer():
 	print("Spawn player function")
 	var rand_room = (randi_range(0,labyrinth.getRoom_Number()-1))
-	print("rand room:")
-	print(rand_room)
+	#print("rand room:", rand_room)
 	var rand_room_vector = (labyrinth.getRoomPos())[rand_room]
-	print("get room pos:")
-	print(labyrinth.getRoomPos())
-	print("rand room V:")
-	print(rand_room_vector)
+	#print("get room pos:", labyrinth.getRoomPos())
+	#print("rand room V:",rand_room_vector)
 	player.setPlayerPosition(rand_room_vector)
 	labyrinth.set_inBossRoom(false)
 
@@ -62,7 +59,7 @@ func init_Game_Menu():
 		labyrinth.setRoom_number(6)      # or else it will not generate a new map of that size on launch
 		labyrinth.set_min_boss_room_size(4)
 		labyrinth.set_max_boss_room_size(5)                     
-		timer.wait_time = 10
+		timer.wait_time = 45
 		labyrinth.set_start(true)
 		labyrinth.setBorderSize(10)
 		
@@ -73,7 +70,7 @@ func init_Game_Menu():
 		labyrinth.setRoom_number(16)
 		labyrinth.set_min_boss_room_size(6)
 		labyrinth.set_max_boss_room_size(7)
-		timer.wait_time = 58
+		timer.wait_time = 60
 		labyrinth.set_start(true)
 		labyrinth.setBorderSize(15)
 	elif gameDifficulty == 2:
@@ -83,8 +80,8 @@ func init_Game_Menu():
 		labyrinth.setRoom_number(25)
 		labyrinth.set_min_boss_room_size(8)
 		labyrinth.set_max_boss_room_size(9)
-		timer.wait_time = 60
-		labyrinth.swait_timeet_start(true)
+		timer.wait_time = 75
+		labyrinth.set_start(true)
 		labyrinth.setBorderSize(25)
 	else:
 		init_Game_Menu()
@@ -112,25 +109,51 @@ func _on_timer_timeout():
 		#print("line 105")
 		var currSize = labyrinth.getBorderSize()
 		var currRoom = labyrinth.getRoom_Number()
-		print("---------------------")
-		print("TIMER Room NUMBER: ", currRoom)
+		#print("---------------------")
+		#print("TIMER Room NUMBER: ", currRoom)
 		
 		if gameDifficulty == 0:
-			if currRoom < 150-easyRoomExpansion:
+			
+			if labyrinth.getRoom_Number() <= maxRoomNumber-easyRoomExpansion:
+				print("maxRoomNumber-easyRoomExpansion: ", maxRoomNumber-easyRoomExpansion)
 				labyrinth.setRoom_number(currRoom+easyRoomExpansion)    #inc rooms spawning
-			timer.wait_time ++ easyWaitTimeExtension                    #inc time to explore new maze
+				timer.wait_time ++ easyWaitTimeExtension                    #inc time to explore new maze
+				print("TIMER 2 Room NUMBER: ", labyrinth.getRoom_Number())
+				print("--------------------")
+				labyrinth.setBorderSize(currSize+expansion)
+				labyrinth.generate()
+				spawnPlayer()
+			else:
+				print("Cannot spawn more rooms / expand more. Game over???????????????????????????")
 		if gameDifficulty == 1:
-			labyrinth.setRoom_number(currRoom+mediumRoomExpansion)
-			timer.wait_time ++ mediumWaitTimeExtension
+			if labyrinth.getRoom_Number() <= maxRoomNumber-mediumRoomExpansion:
+				labyrinth.setRoom_number(currRoom+mediumRoomExpansion)
+				timer.wait_time ++ mediumWaitTimeExtension
+				#print("TIMER 2 Room NUMBER: ", labyrinth.getRoom_Number())
+				#print("--------------------")
+				labyrinth.setBorderSize(currSize+expansion)
+				labyrinth.generate()
+				spawnPlayer()
+			else:
+				print("Cannot spawn more rooms / expand more. Game over???????????????????????????")
 		if gameDifficulty == 2:
-			labyrinth.setRoom_number(currRoom+hardRoomExpansion)
-			timer.wait_time ++ hardWaitTimeExtension
-		currRoom = labyrinth.getRoom_Number()
-		print("TIMER 2 Room NUMBER: ", currRoom)
-		print("--------------------")
-		labyrinth.setBorderSize(currSize+expansion)
-		labyrinth.generate()
-		spawnPlayer()
+			#print("(maxRoomNumber-hardRoomExpansion): ", (maxRoomNumber-hardRoomExpansion))
+			#print ("labyrinth.getRoom_Number() <= maxRoomNumber-hardRoomExpansion: ", labyrinth.getRoom_Number() <= (maxRoomNumber-hardRoomExpansion))
+			if labyrinth.getRoom_Number() <= maxRoomNumber-hardRoomExpansion:
+				labyrinth.setRoom_number(currRoom+hardRoomExpansion)
+				timer.wait_time ++ hardWaitTimeExtension
+				#print("TIMER 2 Room NUMBER: ", labyrinth.getRoom_Number())
+				#print("--------------------")
+				labyrinth.setBorderSize(currSize+expansion)
+				labyrinth.generate()
+				spawnPlayer()
+			else:
+				print("Cannot spawn more rooms / expand more. Game over???????????????????????????")
+		else:
+			pass
+		
+		
+		
 	else:
 		print("timer fail")
 		pass
