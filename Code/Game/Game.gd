@@ -10,7 +10,7 @@ var playerWindowSettings = null
 var playerSensitivity = 0.004
 
 
-var gameDifficulty = 2  # (0, Easy)(1, Medium)(2, Hard)
+var gameDifficulty = 0  # (0, Easy)(1, Medium)(2, Hard)
 
 var maxRoomNumber = 120    # ---- MAX ROOMS FOR A 50X50 AREA
 var githubLink = null
@@ -28,12 +28,16 @@ func _ready():
 
 func spawnPlayer():
 	print("Spawn player function")
-	var rand_room = (randi_range(0,labyrinth.getRoom_Number()-1))
-	#print("rand room:", rand_room)
+	var rand_room = (randi_range(1,labyrinth.getRoom_Number()-1))
+	print("rand room:")
+	print(rand_room)
+	var boss_Room_Coords = labyrinth.getBossRoomCoords()
 	var rand_room_vector = (labyrinth.getRoomPos())[rand_room]
-	#print("get room pos:", labyrinth.getRoomPos())
-	#print("rand room V:",rand_room_vector)
-	player.setPlayerPosition(rand_room_vector)
+	print("get room pos :", labyrinth.getRoomPos())
+	print("Boss Room pos:", boss_Room_Coords)
+	print("rand room V:",rand_room_vector)
+	player.setPlayerPosition(rand_room_vector)   #player.global_transform.origin = (rand_room_vector)??????
+
 	labyrinth.set_inBossRoom(false)
 
 func init_Game_Menu():
@@ -47,22 +51,22 @@ func init_Game_Menu():
 	#                         B. Medium 25x25 start           +6              boss room size 6x6               240s
 	#                         C. Hard   35x35 start           +7              boss room size 8x8               300s
 	# Load Seed   <later in development cycle>
-	# Link to Github 
+	# Link to Github
 	# Close Game
-	
-	#IF USER PRESSES START: 
+
+	#IF USER PRESSES START:
 	labyrinth.set_inBossRoom(false)
 	if gameDifficulty == 0:
-		#print("Game Diff 0")
+		print("Game Diff Easy")
 		expansion = 5
-		labyrinth.setBorderSize(15)      # border is required to be set before and after start 
+		labyrinth.setBorderSize(15)      # border is required to be set before and after start
 		labyrinth.setRoom_number(6)      # or else it will not generate a new map of that size on launch
 		labyrinth.set_min_boss_room_size(4)
-		labyrinth.set_max_boss_room_size(5)                     
-		timer.wait_time = 45
+		labyrinth.set_max_boss_room_size(5)
+		timer.wait_time = 5
 		labyrinth.set_start(true)
 		labyrinth.setBorderSize(10)
-		
+
 	elif gameDifficulty == 1:
 		#print("Game Diff 1")
 		expansion = 6
@@ -85,24 +89,24 @@ func init_Game_Menu():
 		labyrinth.setBorderSize(25)
 	else:
 		init_Game_Menu()
-	
+
 	main_game_loop()
-	
+
 	#Close game
 	#if event is InputEventKey:
 	#if (event as InputEventKey).scancode == KEY_ESCAPE:
 	 #   get_root().quit()
 
-	
+
 func main_game_loop():
 	print("main game loop function")
 	spawnPlayer()
-	
+
 
 
 func _on_timer_timeout():
 	#print("TIMER INBOSSROOM ",labyrinth.get_inBossRoom() )
-	
+
 	#print("TIMER", Time.get_time_dict_from_system())
 	var expand = labyrinth.get_inBossRoom()
 	if expand == false:
@@ -110,10 +114,10 @@ func _on_timer_timeout():
 		var currSize = labyrinth.getBorderSize()
 		var currRoom = labyrinth.getRoom_Number()
 		#print("---------------------")
-		#print("TIMER Room NUMBER: ", currRoom)
-		
+		print("TIMER Room NUMBER: ", currRoom)
+
 		if gameDifficulty == 0:
-			
+
 			if labyrinth.getRoom_Number() <= maxRoomNumber-easyRoomExpansion:
 				print("maxRoomNumber-easyRoomExpansion: ", maxRoomNumber-easyRoomExpansion)
 				labyrinth.setRoom_number(currRoom+easyRoomExpansion)    #inc rooms spawning
@@ -151,9 +155,9 @@ func _on_timer_timeout():
 				print("Cannot spawn more rooms / expand more. Game over???????????????????????????")
 		else:
 			pass
-		
-		
-		
+
+
+
 	else:
 		print("timer fail")
 		pass
