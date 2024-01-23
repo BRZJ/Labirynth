@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://bftcwb4utaqxr"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Window" type="Window" parent="."]
+size = Vector2i(800, 400)
+
+[node name="VSplitContainer" type="VSplitContainer" parent="Window"]
+offset_left = 49.0
+offset_right = 49.0
+offset_bottom = 48.0
+
+[node name="CenterContainer" type="CenterContainer" parent="Window/VSplitContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Window/VSplitContainer/CenterContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.301961, 0.247059, 0.0392157, 1)
+text = "Decryption"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Window/VSplitContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Window/VSplitContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="OptionButton" type="OptionButton" parent="Window/VSplitContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MenuButton" type="MenuButton" parent="Window/VSplitContainer/HBoxContainer/VBoxContainer/OptionButton"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="MenuButton2" type="MenuButton" parent="Window/VSplitContainer/HBoxContainer/VBoxContainer/OptionButton"]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="MenuButton3" type="MenuButton" parent="Window/VSplitContainer/HBoxContainer/VBoxContainer/OptionButton"]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Button" type="Button" parent="Window/VSplitContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="Window/VSplitContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="LinkButton" type="LinkButton" parent="Window/VSplitContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
