@@ -1,13 +1,13 @@
 [gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cmx524f0yfom0"]
 
-[ext_resource type="Texture2D" uid="uid://huc052xwvnuq" path="res://Labyrinth Dungeon Creation/imports/DunCell_TexturesCom_MixedMedievalBricks_1K_albedo.png" id="1_po138"]
+[ext_resource type="Texture2D" uid="uid://d4k2v8fr7x7f0" path="res://Labyrinth Dungeon Creation/imports/testwall.png" id="1_sfb8b"]
 [ext_resource type="Texture2D" uid="uid://pvcdfq7dtuvs" path="res://Labyrinth Dungeon Creation/imports/DunCell_TexturesCom_MixedMedievalBricks_1K_normals.png" id="2_bo2jh"]
 
 [resource]
 resource_name = "walls"
 cull_mode = 2
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("1_po138")
+albedo_texture = ExtResource("1_sfb8b")
 roughness = 0.583636
 normal_enabled = true
 normal_scale = 0.99

@@ -55,7 +55,7 @@ func init_Game_Menu():
 		labyrinth.setRoom_number(6)      # or else it will not generate a new map of that size on launch
 		labyrinth.set_min_boss_room_size(4)
 		labyrinth.set_max_boss_room_size(5)
-		timer.wait_time = 5
+		timer.wait_time = 45
 		labyrinth.set_start(true)
 		labyrinth.setBorderSize(10)
 	elif gameDifficulty == 1:
