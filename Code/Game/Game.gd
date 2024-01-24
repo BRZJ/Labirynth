@@ -3,6 +3,8 @@ extends Node3D
 @onready var labyrinth := $Labyrinth
 @onready var player := $"Labyrinth/Player Character/CharacterBody3D"
 @onready var timer := $Timer
+@onready var dunMesh : Node3D = $Labyrinth/DungeonMesh
+
 var playerCoords := Vector3()
 
 var playerSettings = null
@@ -29,13 +31,13 @@ func _ready():
 func spawnPlayer():
 	print("Spawn player function")
 	var rand_room = (randi_range(1,labyrinth.getRoom_Number()-1))
-	print("rand room:")
-	print(rand_room)
+	#print("rand room:",rand_room)
+
 	var boss_Room_Coords = labyrinth.getBossRoomCoords()
 	var rand_room_vector = (labyrinth.getRoomPos())[rand_room]
-	print("get room pos :", labyrinth.getRoomPos())
-	print("Boss Room pos:", boss_Room_Coords)
-	print("rand room V:",rand_room_vector)
+	#print("get room pos :", labyrinth.getRoomPos())
+	#print("Boss Room pos:", boss_Room_Coords)
+	#print("rand room V:",rand_room_vector)
 	player.setPlayerPosition(rand_room_vector)   #player.global_transform.origin = (rand_room_vector)??????
 
 	labyrinth.set_inBossRoom(false)
@@ -66,7 +68,6 @@ func init_Game_Menu():
 		timer.wait_time = 5
 		labyrinth.set_start(true)
 		labyrinth.setBorderSize(10)
-
 	elif gameDifficulty == 1:
 		#print("Game Diff 1")
 		expansion = 6
@@ -114,7 +115,7 @@ func _on_timer_timeout():
 		var currSize = labyrinth.getBorderSize()
 		var currRoom = labyrinth.getRoom_Number()
 		#print("---------------------")
-		print("TIMER Room NUMBER: ", currRoom)
+		#print("TIMER Room NUMBER: ", currRoom)
 
 		if gameDifficulty == 0:
 
@@ -155,9 +156,6 @@ func _on_timer_timeout():
 				print("Cannot spawn more rooms / expand more. Game over???????????????????????????")
 		else:
 			pass
-
-
-
 	else:
 		print("timer fail")
 		pass

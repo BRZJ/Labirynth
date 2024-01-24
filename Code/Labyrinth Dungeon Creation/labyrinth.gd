@@ -1,8 +1,9 @@
 @tool
 extends Node3D
+@onready var dungeonMeshCreation = $DungeonMesh
 
 @onready var gridMap: GridMap = null
-var start : set = set_start
+@export var start : bool : set = set_start
 var borderSize  : set = set_border
 var room_number
 var room_margin : int = 1 #min distance between rooms
@@ -41,6 +42,9 @@ func setGridMap():
 	gridMap  = $LabyrinthMap
 	#print("Map Set")
 
+func getGridMap()->GridMap:
+	return self.gridMap
+
 func get_inBossRoom()->bool:
 	return self.inBossRoom
 
@@ -74,10 +78,13 @@ func set_min_boss_room_size(val:int)->void:
 
 func set_max_boss_room_size(val:int)->void:
 	max_boss_room_size = val
+
+func getDunMesh()->Node3D:
+	return dungeonMeshCreation
+
 #---------------------------------------------------------------------------------------------------
 #Generating rooms
 func generate():
-
 	visualizeBorder()
 	for i in room_number:
 		if i == 0:
@@ -137,13 +144,16 @@ func generate():
 					hallway_graph.connect_points(p,c)
 
 	create_hallways(hallway_graph)
-
+	print("Line 148 DMC START: ",dungeonMeshCreation.getStart())
+	dungeonMeshCreation.set_DunCellstart(true)
+	print("Line 150 DMC START: ",dungeonMeshCreation.getStart())
 #Create border square YxY size
 func visualizeBorder():
 	#remove existing doors, rooms and borders
 	room_tiles.clear()
 	gridMap.clear()
 	room_positions.clear()
+	dungeonMeshCreation.clear()
 
 	for i in range(-1,borderSize+1):
 		gridMap.set_cell_item( Vector3i(i,0,-1),3)
@@ -256,4 +266,5 @@ func create_hallways(hallway_graph:AStar2D):
 			if gridMap.get_cell_item(pos) <0:
 				gridMap.set_cell_item(pos,1)
 		if _t%16 == 15: await  get_tree().create_timer(0).timeout
+
 
