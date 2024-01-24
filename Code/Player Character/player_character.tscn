@@ -19,7 +19,7 @@ func setPlayerPosition(val:Vector3): # SET PLAYER POSITION
 	print(\"Set Player Position Debugging: -\", getPlayerPosition())
 	# Set the global transform of the Player Character
 	#global_transform.origin = val
-	transform.origin = val
+	transform.origin = Vector3(val.x, 0, val.z)
 	print(\"Set Player Position Debugging: -\", getPlayerPosition())
 
 
