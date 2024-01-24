@@ -4,24 +4,24 @@ extends Node3D
 
 @onready var labyrinth = $".."
 @onready var grid_map : GridMap = labyrinth.getGridMap()
-
+@onready var dunCellstart : bool= false
 var dun_cell_scene : PackedScene = preload("res://Labyrinth Dungeon Creation/imports/DunCell.tscn")
 
 var directions : Dictionary = {
 	"up" : Vector3i.FORWARD,"down" : Vector3i.BACK,
 	"left" : Vector3i.LEFT,"right" : Vector3i.RIGHT
 }
-@export var dunCellstart : bool = false : set = set_DunCellstart
+
 
 func set_DunCellstart(val:bool)->void:
-	print("dunmesh set start " )
+	print("Dungeon mesh set start function " )
 	if val == true:
 		dunCellstart = true
 		#if Engine.is_editor_hint():
-		print("DUN MESH Start TRUE")
+		print("\tDUN MESH Start TRUE")
 		create_dungeon()
 	else:
-		print("set_DunCellstart val==false")
+		print("\tset_DunCellstart val==false")
 
 func getStart()->bool:
 	return dunCellstart
@@ -70,6 +70,7 @@ func handle_Err():
 func create_dungeon():
 	clear()
 	var t : int = 0
+	print("gridmap dunmesh: ", grid_map)
 	for cell in grid_map.get_used_cells():
 		var cell_index : int = grid_map.get_cell_item(cell)
 		if cell_index <=2\
