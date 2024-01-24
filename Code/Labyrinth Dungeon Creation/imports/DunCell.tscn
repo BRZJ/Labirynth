@@ -378,7 +378,6 @@ shape = SubResource("ConcavePolygonShape3D_uxjkv")
 
 [node name="wall_up" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, -5.37336e-16, 0, -5.37334e-16, 1, 0, 0, 0, 1, 0, 0, 0)
-visible = false
 mesh = SubResource("ArrayMesh_fumrc")
 skeleton = NodePath("")
 
@@ -388,7 +387,6 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_pevgb")
 
 [node name="door_up" type="MeshInstance3D" parent="."]
-visible = false
 mesh = SubResource("ArrayMesh_f0pp8")
 skeleton = NodePath("")
 
@@ -466,13 +464,3 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ceiling/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_4iqjn")
-
-[node name="wall_up2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -5.37336e-16, 0, -5.37334e-16, 1, 0, 0, 0, 1, 0, 0, 0)
-mesh = SubResource("ArrayMesh_fumrc")
-skeleton = NodePath("")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="wall_up2"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="wall_up2/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_pevgb")
