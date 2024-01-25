@@ -1,4 +1,18 @@
-[gd_scene format=3 uid="uid://bftcwb4utaqxr"]
+[gd_scene load_steps=8 format=3 uid="uid://bftcwb4utaqxr"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_tofa0"]
+[ext_resource type="Script" path="res://Easy.gd" id="2_aet0t"]
+[ext_resource type="Script" path="res://Medium.gd" id="3_yelxd"]
+[ext_resource type="Script" path="res://Hard.gd" id="4_8opeg"]
+[ext_resource type="PackedScene" uid="uid://dhcpy3c7b6eqk" path="res://Game/game.tscn" id="5_tm818"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vqc0l"]
+
+[sub_resource type="Theme" id="Theme_8g7lg"]
+Button/constants/h_separation = 8
+Button/font_sizes/font_size = 20
+Button/fonts/font = null
+Label/font_sizes/font_size = 20
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -7,51 +21,110 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_tofa0")
 
-[node name="Window" type="Window" parent="."]
-size = Vector2i(800, 400)
+[node name="Window (inactive)" type="Window" parent="."]
+size = Vector2i(1156, 648)
+visible = false
 
-[node name="VSplitContainer" type="VSplitContainer" parent="Window"]
+[node name="VSplitContainer (inactive)" type="VSplitContainer" parent="."]
+visible = false
 offset_left = 49.0
 offset_right = 49.0
 offset_bottom = 48.0
 
-[node name="CenterContainer" type="CenterContainer" parent="Window/VSplitContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="VSplitContainer (inactive)"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Window/VSplitContainer/CenterContainer"]
+[node name="Label" type="Label" parent="VSplitContainer (inactive)/CenterContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.301961, 0.247059, 0.0392157, 1)
 text = "Decryption"
 horizontal_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Window/VSplitContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VSplitContainer (inactive)"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Window/VSplitContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer (inactive)/HBoxContainer"]
 layout_mode = 2
 
-[node name="OptionButton" type="OptionButton" parent="Window/VSplitContainer/HBoxContainer/VBoxContainer"]
+[node name="OptionButton" type="OptionButton" parent="VSplitContainer (inactive)/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="MenuButton" type="MenuButton" parent="Window/VSplitContainer/HBoxContainer/VBoxContainer/OptionButton"]
+[node name="MenuButton" type="MenuButton" parent="VSplitContainer (inactive)/HBoxContainer/VBoxContainer/OptionButton"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+item_count = 1
+popup/item_0/text = ""
+popup/item_0/id = 0
+
+[node name="MenuButton2" type="MenuButton" parent="VSplitContainer (inactive)/HBoxContainer/VBoxContainer/OptionButton"]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 
-[node name="MenuButton2" type="MenuButton" parent="Window/VSplitContainer/HBoxContainer/VBoxContainer/OptionButton"]
+[node name="MenuButton3" type="MenuButton" parent="VSplitContainer (inactive)/HBoxContainer/VBoxContainer/OptionButton"]
+layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 
-[node name="MenuButton3" type="MenuButton" parent="Window/VSplitContainer/HBoxContainer/VBoxContainer/OptionButton"]
-offset_right = 8.0
-offset_bottom = 8.0
-
-[node name="Button" type="Button" parent="Window/VSplitContainer/HBoxContainer/VBoxContainer"]
+[node name="Button" type="Button" parent="VSplitContainer (inactive)/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Button2" type="Button" parent="Window/VSplitContainer/HBoxContainer/VBoxContainer"]
+[node name="Button2" type="Button" parent="VSplitContainer (inactive)/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="LinkButton" type="LinkButton" parent="Window/VSplitContainer/HBoxContainer/VBoxContainer"]
+[node name="LinkButton" type="LinkButton" parent="VSplitContainer (inactive)/HBoxContainer/VBoxContainer"]
 layout_mode = 2
+
+[node name="ControlsLabel" type="Label" parent="."]
+offset_left = 10.0
+offset_top = 537.0
+offset_right = 154.0
+offset_bottom = 638.0
+text = "Controls: 
+WASD - Movement
+Spacebar - Jump
+Mouse - Camera
+"
+label_settings = SubResource("LabelSettings_vqc0l")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = -110.0
+offset_right = 110.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+theme = SubResource("Theme_8g7lg")
+
+[node name="ChooseDifficultyLabel" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Choose your difficulty"
+horizontal_alignment = 1
+
+[node name="Easy" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Easy"
+script = ExtResource("2_aet0t")
+
+[node name="Medium" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Medium"
+script = ExtResource("3_yelxd")
+
+[node name="Hard" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Hard"
+script = ExtResource("4_8opeg")
+GameScene = ExtResource("5_tm818")
