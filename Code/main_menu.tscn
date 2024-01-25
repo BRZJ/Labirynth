@@ -23,62 +23,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tofa0")
 
-[node name="Window (inactive)" type="Window" parent="."]
-size = Vector2i(1156, 648)
-visible = false
-
-[node name="VSplitContainer (inactive)" type="VSplitContainer" parent="."]
-visible = false
-offset_left = 49.0
-offset_right = 49.0
-offset_bottom = 48.0
-
-[node name="CenterContainer" type="CenterContainer" parent="VSplitContainer (inactive)"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="VSplitContainer (inactive)/CenterContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.301961, 0.247059, 0.0392157, 1)
-text = "Decryption"
-horizontal_alignment = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VSplitContainer (inactive)"]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer (inactive)/HBoxContainer"]
-layout_mode = 2
-
-[node name="OptionButton" type="OptionButton" parent="VSplitContainer (inactive)/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="MenuButton" type="MenuButton" parent="VSplitContainer (inactive)/HBoxContainer/VBoxContainer/OptionButton"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-item_count = 1
-popup/item_0/text = ""
-popup/item_0/id = 0
-
-[node name="MenuButton2" type="MenuButton" parent="VSplitContainer (inactive)/HBoxContainer/VBoxContainer/OptionButton"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-
-[node name="MenuButton3" type="MenuButton" parent="VSplitContainer (inactive)/HBoxContainer/VBoxContainer/OptionButton"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-
-[node name="Button" type="Button" parent="VSplitContainer (inactive)/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Button2" type="Button" parent="VSplitContainer (inactive)/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="LinkButton" type="LinkButton" parent="VSplitContainer (inactive)/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-
 [node name="ControlsLabel" type="Label" parent="."]
+layout_mode = 0
 offset_left = 10.0
 offset_top = 537.0
 offset_right = 154.0

@@ -26,10 +26,26 @@ var hardRoomExpansion = 6
 
 func _ready():
 
-	print('dun mesh game start ', dunMesh.getStart())
+
 	labyrinth.set_start(false)
 	init_Game_Menu()
 
+
+
+
+
+func _on_easy_pressed():
+	gameDifficulty = 0
+	print("BUTTON EASY\n")
+	init_Game_Menu()
+func _on_medium_pressed():
+	gameDifficulty = 1
+	print("BUTTON MEDIUM\n")
+	init_Game_Menu()
+func _on_hard_pressed():
+	gameDifficulty = 2
+	print("BUTTON HARD\n")
+	init_Game_Menu()
 
 
 func init_Game_Menu():
@@ -81,17 +97,13 @@ func init_Game_Menu():
 	else:
 		init_Game_Menu()
 
-	main_game_loop()
+	spawnPlayer()
 
 	#Close game
 	#if event is InputEventKey:
 	#if (event as InputEventKey).scancode == KEY_ESCAPE:
 	 #   get_root().quit()
 
-
-func main_game_loop():
-	print("main game loop function")
-	spawnPlayer()
 
 func spawnPlayer():
 	print("Spawn player function")
@@ -162,3 +174,8 @@ func _on_timer_timeout():
 	else:
 		print("timer fail")
 		pass
+
+
+
+
+
