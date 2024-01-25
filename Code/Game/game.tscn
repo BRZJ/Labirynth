@@ -431,13 +431,18 @@ shape = SubResource("ConvexPolygonShape3D_bvgqa")
 
 [node name="MainMenu" parent="." instance=ExtResource("7_m6skg")]
 
-[node name="Easy" parent="MainMenu/PanelContainer/VBoxContainer" index="1"]
+[node name="Label" type="Label" parent="MainMenu/PanelContainer/VBoxContainer" index="0"]
+layout_mode = 2
+text = "Decryprion"
+horizontal_alignment = 1
+
+[node name="Easy" parent="MainMenu/PanelContainer/VBoxContainer" index="2"]
 script = null
 
-[node name="Medium" parent="MainMenu/PanelContainer/VBoxContainer" index="2"]
+[node name="Medium" parent="MainMenu/PanelContainer/VBoxContainer" index="3"]
 script = null
 
-[node name="Hard" parent="MainMenu/PanelContainer/VBoxContainer" index="3"]
+[node name="Hard" parent="MainMenu/PanelContainer/VBoxContainer" index="4"]
 script = null
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

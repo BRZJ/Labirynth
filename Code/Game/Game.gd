@@ -4,6 +4,7 @@ extends Node3D
 @onready var player := $"Labyrinth/Player Character/CharacterBody3D"
 @onready var timer := $Timer
 @onready var dunMesh : Node3D = $Labyrinth/DungeonMesh
+@onready var mainMenu := $MainMenu
 
 var playerCoords := Vector3()
 
@@ -37,14 +38,17 @@ func _ready():
 func _on_easy_pressed():
 	gameDifficulty = 0
 	print("BUTTON EASY\n")
+	remove_child(mainMenu)
 	init_Game_Menu()
 func _on_medium_pressed():
 	gameDifficulty = 1
 	print("BUTTON MEDIUM\n")
+	remove_child(mainMenu)
 	init_Game_Menu()
 func _on_hard_pressed():
 	gameDifficulty = 2
 	print("BUTTON HARD\n")
+	remove_child(mainMenu)
 	init_Game_Menu()
 
 
