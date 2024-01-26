@@ -8,13 +8,12 @@ Expanding labyrinth the player has to escape before the labryinth changes itself
 *Developers:*
 - imran1503
 - BRZJ
-- qlwdy
+
 
 *Artists:*
 - r217
-- gentleboat
-
+- qlwdy
 ## How to Run
-    loakwjrdalknsd
+    Download and run the executable file, located in Builds. 
 
 ## 
