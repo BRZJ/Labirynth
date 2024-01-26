@@ -23,268 +23,316 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.96919, 1.23474, 0.992542)
 start = true
 
 [node name="DunCell" parent="Labyrinth/DungeonMesh" index="0"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 2.5, 0, 4.5)
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 7.5, 0, 3.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23203" parent="Labyrinth/DungeonMesh" index="1"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 3.5, 0, 7.5)
+[node name="@Node3D@17459" parent="Labyrinth/DungeonMesh" index="1"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 10.5, 0, 3.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23204" parent="Labyrinth/DungeonMesh" index="2"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 11.5, 0, 10.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23205" parent="Labyrinth/DungeonMesh" index="3"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 12.5, 0, 10.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23206" parent="Labyrinth/DungeonMesh" index="4"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 11.5, 0, 11.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23207" parent="Labyrinth/DungeonMesh" index="5"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 12.5, 0, 11.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23208" parent="Labyrinth/DungeonMesh" index="6"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 11.5, 0, 12.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23209" parent="Labyrinth/DungeonMesh" index="7"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 12.5, 0, 12.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23210" parent="Labyrinth/DungeonMesh" index="8"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 4.5, 0, 9.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23342" parent="Labyrinth/DungeonMesh" index="9"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 5.5, 0, 9.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23343" parent="Labyrinth/DungeonMesh" index="10"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 6.5, 0, 9.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23344" parent="Labyrinth/DungeonMesh" index="11"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 4.5, 0, 10.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23345" parent="Labyrinth/DungeonMesh" index="12"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 5.5, 0, 10.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23346" parent="Labyrinth/DungeonMesh" index="13"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 6.5, 0, 10.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23347" parent="Labyrinth/DungeonMesh" index="14"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 4.5, 0, 11.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23348" parent="Labyrinth/DungeonMesh" index="15"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 5.5, 0, 11.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23349" parent="Labyrinth/DungeonMesh" index="16"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 6.5, 0, 11.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23350" parent="Labyrinth/DungeonMesh" index="17"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 1.5, 0, 0.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23351" parent="Labyrinth/DungeonMesh" index="18"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 2.5, 0, 0.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23352" parent="Labyrinth/DungeonMesh" index="19"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 1.5, 0, 1.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23353" parent="Labyrinth/DungeonMesh" index="20"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 2.5, 0, 1.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23354" parent="Labyrinth/DungeonMesh" index="21"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 6.5, 0, 6.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23355" parent="Labyrinth/DungeonMesh" index="22"]
+[node name="@Node3D@17460" parent="Labyrinth/DungeonMesh" index="2"]
 transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 7.5, 0, 6.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23356" parent="Labyrinth/DungeonMesh" index="23"]
+[node name="@Node3D@17461" parent="Labyrinth/DungeonMesh" index="3"]
 transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 8.5, 0, 6.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23357" parent="Labyrinth/DungeonMesh" index="24"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 6.5, 0, 7.5)
+[node name="@Node3D@17462" parent="Labyrinth/DungeonMesh" index="4"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 10.5, 0, 6.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23358" parent="Labyrinth/DungeonMesh" index="25"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 7.5, 0, 7.5)
+[node name="@Node3D@17463" parent="Labyrinth/DungeonMesh" index="5"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 2.5, 0, 12.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23359" parent="Labyrinth/DungeonMesh" index="26"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 8.5, 0, 7.5)
+[node name="@Node3D@17464" parent="Labyrinth/DungeonMesh" index="6"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 3.5, 0, 12.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23360" parent="Labyrinth/DungeonMesh" index="27"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 11.5, 0, 4.5)
+[node name="@Node3D@17465" parent="Labyrinth/DungeonMesh" index="7"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 4.5, 0, 12.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23361" parent="Labyrinth/DungeonMesh" index="28"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 12.5, 0, 4.5)
+[node name="@Node3D@17466" parent="Labyrinth/DungeonMesh" index="8"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 2.5, 0, 13.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23362" parent="Labyrinth/DungeonMesh" index="29"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 11.5, 0, 5.5)
+[node name="@Node3D@17829" parent="Labyrinth/DungeonMesh" index="9"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 3.5, 0, 13.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23363" parent="Labyrinth/DungeonMesh" index="30"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 12.5, 0, 5.5)
+[node name="@Node3D@17830" parent="Labyrinth/DungeonMesh" index="10"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 4.5, 0, 13.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23364" parent="Labyrinth/DungeonMesh" index="31"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 11.5, 0, 6.5)
+[node name="@Node3D@17831" parent="Labyrinth/DungeonMesh" index="11"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 7.5, 0, 9.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23365" parent="Labyrinth/DungeonMesh" index="32"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 12.5, 0, 6.5)
+[node name="@Node3D@17832" parent="Labyrinth/DungeonMesh" index="12"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 8.5, 0, 9.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23366" parent="Labyrinth/DungeonMesh" index="33"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 5.5, 0, 1.5)
+[node name="@Node3D@17833" parent="Labyrinth/DungeonMesh" index="13"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 9.5, 0, 9.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23367" parent="Labyrinth/DungeonMesh" index="34"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 6.5, 0, 1.5)
+[node name="@Node3D@17834" parent="Labyrinth/DungeonMesh" index="14"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 7.5, 0, 10.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23368" parent="Labyrinth/DungeonMesh" index="35"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 5.5, 0, 2.5)
+[node name="@Node3D@17835" parent="Labyrinth/DungeonMesh" index="15"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 8.5, 0, 10.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23369" parent="Labyrinth/DungeonMesh" index="36"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 6.5, 0, 2.5)
+[node name="@Node3D@17836" parent="Labyrinth/DungeonMesh" index="16"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 9.5, 0, 10.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23370" parent="Labyrinth/DungeonMesh" index="37"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 6.5, 0, 8.5)
+[node name="@Node3D@17837" parent="Labyrinth/DungeonMesh" index="17"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 3.5, 0, 6.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23371" parent="Labyrinth/DungeonMesh" index="38"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 11.5, 0, 3.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23372" parent="Labyrinth/DungeonMesh" index="39"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 11.5, 0, 2.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23373" parent="Labyrinth/DungeonMesh" index="40"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 10.5, 0, 2.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23374" parent="Labyrinth/DungeonMesh" index="41"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 9.5, 0, 2.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23375" parent="Labyrinth/DungeonMesh" index="42"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 8.5, 0, 2.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23376" parent="Labyrinth/DungeonMesh" index="43"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 7.5, 0, 2.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23377" parent="Labyrinth/DungeonMesh" index="44"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 2.5, 0, 3.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23378" parent="Labyrinth/DungeonMesh" index="45"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 2.5, 0, 2.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23379" parent="Labyrinth/DungeonMesh" index="46"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 4.5, 0, 7.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23380" parent="Labyrinth/DungeonMesh" index="47"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 4.5, 0, 8.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23381" parent="Labyrinth/DungeonMesh" index="48"]
+[node name="@Node3D@17838" parent="Labyrinth/DungeonMesh" index="18"]
 transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 4.5, 0, 6.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23382" parent="Labyrinth/DungeonMesh" index="49"]
+[node name="@Node3D@17839" parent="Labyrinth/DungeonMesh" index="19"]
 transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 5.5, 0, 6.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23383" parent="Labyrinth/DungeonMesh" index="50"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 3.5, 0, 1.5)
+[node name="@Node3D@17840" parent="Labyrinth/DungeonMesh" index="20"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 3.5, 0, 7.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23384" parent="Labyrinth/DungeonMesh" index="51"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 4.5, 0, 1.5)
+[node name="@Node3D@17841" parent="Labyrinth/DungeonMesh" index="21"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 4.5, 0, 7.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23385" parent="Labyrinth/DungeonMesh" index="52"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 11.5, 0, 9.5)
+[node name="@Node3D@17842" parent="Labyrinth/DungeonMesh" index="22"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 5.5, 0, 7.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23386" parent="Labyrinth/DungeonMesh" index="53"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 11.5, 0, 8.5)
+[node name="@Node3D@17843" parent="Labyrinth/DungeonMesh" index="23"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 3.5, 0, 8.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23387" parent="Labyrinth/DungeonMesh" index="54"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 11.5, 0, 7.5)
+[node name="@Node3D@17844" parent="Labyrinth/DungeonMesh" index="24"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 4.5, 0, 8.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23388" parent="Labyrinth/DungeonMesh" index="55"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 10.5, 0, 7.5)
+[node name="@Node3D@17845" parent="Labyrinth/DungeonMesh" index="25"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 5.5, 0, 8.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23389" parent="Labyrinth/DungeonMesh" index="56"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 9.5, 0, 7.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23390" parent="Labyrinth/DungeonMesh" index="57"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 12.5, 0, 9.5)
-script = ExtResource("3_gs1pi")
-
-[node name="@Node3D@23391" parent="Labyrinth/DungeonMesh" index="58"]
+[node name="@Node3D@17846" parent="Labyrinth/DungeonMesh" index="26"]
 transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 12.5, 0, 8.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23392" parent="Labyrinth/DungeonMesh" index="59"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 12.5, 0, 7.5)
+[node name="@Node3D@17847" parent="Labyrinth/DungeonMesh" index="27"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 13.5, 0, 8.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23393" parent="Labyrinth/DungeonMesh" index="60"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 6.5, 0, 5.5)
+[node name="@Node3D@17848" parent="Labyrinth/DungeonMesh" index="28"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 12.5, 0, 9.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23394" parent="Labyrinth/DungeonMesh" index="61"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 6.5, 0, 4.5)
+[node name="@Node3D@17852" parent="Labyrinth/DungeonMesh" index="29"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 13.5, 0, 9.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23395" parent="Labyrinth/DungeonMesh" index="62"]
+[node name="@Node3D@17853" parent="Labyrinth/DungeonMesh" index="30"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 12.5, 0, 10.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17854" parent="Labyrinth/DungeonMesh" index="31"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 13.5, 0, 10.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17855" parent="Labyrinth/DungeonMesh" index="32"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 10.5, 0, 0.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17856" parent="Labyrinth/DungeonMesh" index="33"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 11.5, 0, 0.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17857" parent="Labyrinth/DungeonMesh" index="34"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 10.5, 0, 1.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17858" parent="Labyrinth/DungeonMesh" index="35"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 11.5, 0, 1.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17859" parent="Labyrinth/DungeonMesh" index="36"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 4.5, 0, 1.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17860" parent="Labyrinth/DungeonMesh" index="37"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 5.5, 0, 1.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17861" parent="Labyrinth/DungeonMesh" index="38"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 4.5, 0, 2.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17862" parent="Labyrinth/DungeonMesh" index="39"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 5.5, 0, 2.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17863" parent="Labyrinth/DungeonMesh" index="40"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 4.5, 0, 3.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17864" parent="Labyrinth/DungeonMesh" index="41"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 5.5, 0, 3.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17865" parent="Labyrinth/DungeonMesh" index="42"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 7.5, 0, 8.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17866" parent="Labyrinth/DungeonMesh" index="43"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 6.5, 0, 8.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17867" parent="Labyrinth/DungeonMesh" index="44"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 10.5, 0, 9.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17868" parent="Labyrinth/DungeonMesh" index="45"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 11.5, 0, 9.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17869" parent="Labyrinth/DungeonMesh" index="46"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 11.5, 0, 10.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17870" parent="Labyrinth/DungeonMesh" index="47"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 9.5, 0, 1.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17871" parent="Labyrinth/DungeonMesh" index="48"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 8.5, 0, 1.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17872" parent="Labyrinth/DungeonMesh" index="49"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 7.5, 0, 1.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17873" parent="Labyrinth/DungeonMesh" index="50"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 6.5, 0, 1.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17874" parent="Labyrinth/DungeonMesh" index="51"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 10.5, 0, 2.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17875" parent="Labyrinth/DungeonMesh" index="52"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 9.5, 0, 7.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17876" parent="Labyrinth/DungeonMesh" index="53"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 9.5, 0, 8.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17877" parent="Labyrinth/DungeonMesh" index="54"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 6.5, 0, 6.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17878" parent="Labyrinth/DungeonMesh" index="55"]
 transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 6.5, 0, 3.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23396" parent="Labyrinth/DungeonMesh" index="63"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 9.5, 0, 6.5)
+[node name="@Node3D@17879" parent="Labyrinth/DungeonMesh" index="56"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 11.5, 0, 6.5)
 script = ExtResource("3_gs1pi")
 
-[node name="@Node3D@23397" parent="Labyrinth/DungeonMesh" index="64"]
-transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 10.5, 0, 6.5)
+[node name="@Node3D@17880" parent="Labyrinth/DungeonMesh" index="57"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 12.5, 0, 6.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17881" parent="Labyrinth/DungeonMesh" index="58"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 12.5, 0, 7.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17882" parent="Labyrinth/DungeonMesh" index="59"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 5.5, 0, 5.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17883" parent="Labyrinth/DungeonMesh" index="60"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 5.5, 0, 4.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17884" parent="Labyrinth/DungeonMesh" index="61"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 4.5, 0, 11.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17885" parent="Labyrinth/DungeonMesh" index="62"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 4.5, 0, 10.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17886" parent="Labyrinth/DungeonMesh" index="63"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 4.5, 0, 9.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17887" parent="Labyrinth/DungeonMesh" index="64"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 3.5, 0, 9.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17888" parent="Labyrinth/DungeonMesh" index="65"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 5.5, 0, 11.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17889" parent="Labyrinth/DungeonMesh" index="66"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 6.5, 0, 11.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17890" parent="Labyrinth/DungeonMesh" index="67"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 7.5, 0, 11.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17891" parent="Labyrinth/DungeonMesh" index="68"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 8.5, 0, 11.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17892" parent="Labyrinth/DungeonMesh" index="69"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 9.5, 0, 11.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17893" parent="Labyrinth/DungeonMesh" index="70"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 10.5, 0, 11.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17894" parent="Labyrinth/DungeonMesh" index="71"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 10.5, 0, 10.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17895" parent="Labyrinth/DungeonMesh" index="72"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 12.5, 0, 5.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17896" parent="Labyrinth/DungeonMesh" index="73"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 12.5, 0, 4.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17897" parent="Labyrinth/DungeonMesh" index="74"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 12.5, 0, 3.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17898" parent="Labyrinth/DungeonMesh" index="75"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 12.5, 0, 2.5)
+script = ExtResource("3_gs1pi")
+
+[node name="@Node3D@17899" parent="Labyrinth/DungeonMesh" index="76"]
+transform = Transform3D(1, 4.37114e-08, -1.74846e-07, -4.37114e-08, 1, 4.37114e-08, 1.74846e-07, -4.37114e-08, 1, 12.5, 0, 1.5)
 script = ExtResource("3_gs1pi")
 
 [node name="LabyrinthMap" parent="Labyrinth" index="1"]
 data = {
-"cells": PackedInt32Array(65535, 65535, 3, 65535, 15, 3, 15, 65535, 3, 0, 65535, 3, 0, 15, 3, 15, 0, 3, 65535, 0, 3, 1, 65535, 3, 1, 15, 3, 15, 1, 3, 65535, 1, 3, 2, 65535, 3, 2, 15, 3, 15, 2, 3, 65535, 2, 3, 3, 65535, 3, 3, 15, 3, 15, 3, 3, 65535, 3, 3, 4, 65535, 3, 4, 15, 3, 15, 4, 3, 65535, 4, 3, 5, 65535, 3, 5, 15, 3, 15, 5, 3, 65535, 5, 3, 6, 65535, 3, 6, 15, 3, 15, 6, 3, 65535, 6, 3, 7, 65535, 3, 7, 15, 3, 15, 7, 3, 65535, 7, 3, 8, 65535, 3, 8, 15, 3, 15, 8, 3, 65535, 8, 3, 9, 65535, 3, 9, 15, 3, 15, 9, 3, 65535, 9, 3, 10, 65535, 3, 10, 15, 3, 15, 10, 3, 65535, 10, 3, 11, 65535, 3, 11, 15, 3, 15, 11, 3, 65535, 11, 3, 12, 65535, 3, 12, 15, 3, 15, 12, 3, 65535, 12, 3, 13, 65535, 3, 13, 15, 3, 15, 13, 3, 65535, 13, 3, 14, 65535, 3, 14, 15, 3, 15, 14, 3, 65535, 14, 3, 15, 15, 3, 0, 4, 4, 1, 4, 4, 2, 4, 2, 3, 4, 4, 0, 5, 4, 1, 5, 4, 2, 5, 4, 3, 5, 4, 0, 6, 4, 1, 6, 4, 2, 6, 4, 3, 6, 4, 0, 7, 4, 1, 7, 4, 2, 7, 4, 3, 7, 2, 11, 10, 2, 12, 10, 2, 11, 11, 0, 12, 11, 0, 11, 12, 0, 12, 12, 0, 4, 9, 2, 5, 9, 0, 6, 9, 2, 4, 10, 0, 5, 10, 0, 6, 10, 0, 4, 11, 0, 5, 11, 0, 6, 11, 0, 1, 0, 0, 2, 0, 0, 1, 1, 0, 2, 1, 2, 6, 6, 2, 7, 6, 0, 8, 6, 2, 6, 7, 2, 7, 7, 0, 8, 7, 2, 11, 4, 2, 12, 4, 0, 11, 5, 0, 12, 5, 0, 11, 6, 2, 12, 6, 2, 5, 1, 2, 6, 1, 0, 5, 2, 0, 6, 2, 2, 6, 8, 1, 11, 3, 1, 11, 2, 1, 10, 2, 1, 9, 2, 1, 8, 2, 1, 7, 2, 1, 2, 3, 1, 2, 2, 1, 4, 7, 1, 4, 8, 1, 4, 6, 1, 5, 6, 1, 3, 1, 1, 4, 1, 1, 11, 9, 1, 11, 8, 1, 11, 7, 1, 10, 7, 1, 9, 7, 1, 12, 9, 1, 12, 8, 1, 12, 7, 1, 6, 5, 1, 6, 4, 1, 6, 3, 1, 9, 6, 1, 10, 6, 1)
+"cells": PackedInt32Array(65535, 65535, 3, 65535, 15, 3, 15, 65535, 3, 0, 65535, 3, 0, 15, 3, 15, 0, 3, 65535, 0, 3, 1, 65535, 3, 1, 15, 3, 15, 1, 3, 65535, 1, 3, 2, 65535, 3, 2, 15, 3, 15, 2, 3, 65535, 2, 3, 3, 65535, 3, 3, 15, 3, 15, 3, 3, 65535, 3, 3, 4, 65535, 3, 4, 15, 3, 15, 4, 3, 65535, 4, 3, 5, 65535, 3, 5, 15, 3, 15, 5, 3, 65535, 5, 3, 6, 65535, 3, 6, 15, 3, 15, 6, 3, 65535, 6, 3, 7, 65535, 3, 7, 15, 3, 15, 7, 3, 65535, 7, 3, 8, 65535, 3, 8, 15, 3, 15, 8, 3, 65535, 8, 3, 9, 65535, 3, 9, 15, 3, 15, 9, 3, 65535, 9, 3, 10, 65535, 3, 10, 15, 3, 15, 10, 3, 65535, 10, 3, 11, 65535, 3, 11, 15, 3, 15, 11, 3, 65535, 11, 3, 12, 65535, 3, 12, 15, 3, 15, 12, 3, 65535, 12, 3, 13, 65535, 3, 13, 15, 3, 15, 13, 3, 65535, 13, 3, 14, 65535, 3, 14, 15, 3, 15, 14, 3, 65535, 14, 3, 15, 15, 3, 7, 3, 2, 8, 3, 4, 9, 3, 4, 10, 3, 2, 7, 4, 4, 8, 4, 4, 9, 4, 4, 10, 4, 4, 7, 5, 4, 8, 5, 4, 9, 5, 4, 10, 5, 4, 7, 6, 2, 8, 6, 2, 9, 6, 4, 10, 6, 2, 2, 12, 0, 3, 12, 0, 4, 12, 2, 2, 13, 0, 3, 13, 0, 4, 13, 0, 7, 9, 2, 8, 9, 0, 9, 9, 2, 7, 10, 0, 8, 10, 0, 9, 10, 0, 3, 6, 0, 4, 6, 0, 5, 6, 2, 3, 7, 0, 4, 7, 0, 5, 7, 0, 3, 8, 2, 4, 8, 0, 5, 8, 2, 12, 8, 2, 13, 8, 0, 12, 9, 0, 13, 9, 0, 12, 10, 2, 13, 10, 0, 10, 0, 0, 11, 0, 0, 10, 1, 2, 11, 1, 2, 4, 1, 0, 5, 1, 2, 4, 2, 0, 5, 2, 0, 4, 3, 2, 5, 3, 2, 7, 8, 1, 6, 8, 1, 10, 9, 1, 11, 9, 1, 11, 10, 1, 9, 1, 1, 8, 1, 1, 7, 1, 1, 6, 1, 1, 10, 2, 1, 9, 7, 1, 9, 8, 1, 6, 6, 1, 6, 3, 1, 11, 6, 1, 12, 6, 1, 12, 7, 1, 5, 5, 1, 5, 4, 1, 4, 11, 1, 4, 10, 1, 4, 9, 1, 3, 9, 1, 5, 11, 1, 6, 11, 1, 7, 11, 1, 8, 11, 1, 9, 11, 1, 10, 11, 1, 10, 10, 1, 12, 5, 1, 12, 4, 1, 12, 3, 1, 12, 2, 1, 12, 1, 1)
 }
 
 [node name="Player Character" parent="Labyrinth" instance=ExtResource("3_o7jgm")]
@@ -313,7 +361,7 @@ shape = SubResource("ConvexPolygonShape3D_bvgqa")
 
 [node name="Label" type="Label" parent="MainMenu/PanelContainer/VBoxContainer" index="0"]
 layout_mode = 2
-text = "Decryprion"
+text = "Decryption"
 horizontal_alignment = 1
 
 [node name="Easy" parent="MainMenu/PanelContainer/VBoxContainer" index="2"]
