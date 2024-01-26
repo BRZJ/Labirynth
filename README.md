@@ -6,13 +6,13 @@ Expanding labyrinth the player has to escape before the labryinth changes itself
 
 ## Authors
 *Developers:*
-- imran1503 - Imran Latif 
-- BRZJ -
-- qlwdy -
+- imran1503
+- BRZJ
+- qlwdy
 
 *Artists:*
-- r217 - 
-- gentleboat -
+- r217
+- gentleboat
 
 ## How to Run
     loakwjrdalknsd
