@@ -1,9 +1,10 @@
 @tool
 extends Node3D
+
 @onready var labyrinth := $Labyrinth
 @onready var player := $"Labyrinth/Player Character/CharacterBody3D"
 @onready var timer := $Timer
-@onready var dunMesh : Node3D = $Labyrinth/DungeonMesh
+@onready var dunMesh := $Labyrinth/DungeonMesh
 @onready var mainMenu := $MainMenu
 
 var playerCoords := Vector3()
@@ -114,7 +115,7 @@ func spawnPlayer():
 	var rand_room = (randi_range(1,labyrinth.getRoom_Number()-1))
 	#print("rand room:",rand_room)
 
-	var boss_Room_Coords = labyrinth.getBossRoomCoords()
+	#var boss_Room_Coords = labyrinth.getBossRoomCoords()
 	var rand_room_vector = (labyrinth.getRoomPos())[rand_room]
 	#print("get room pos :", labyrinth.getRoomPos())
 	#print("Boss Room pos:", boss_Room_Coords)
