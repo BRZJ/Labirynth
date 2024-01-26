@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://bftcwb4utaqxr"]
 
-[ext_resource type="Script" path="res://main_menu.gd" id="1_tofa0"]
+[ext_resource type="Script" path="res://Game/Game.gd" id="1_tofa0"]
 [ext_resource type="Script" path="res://Easy.gd" id="2_aet0t"]
 [ext_resource type="Script" path="res://Medium.gd" id="3_yelxd"]
 [ext_resource type="Script" path="res://Hard.gd" id="4_8opeg"]
-[ext_resource type="PackedScene" uid="uid://dhcpy3c7b6eqk" path="res://Game/game.tscn" id="5_tm818"]
+[ext_resource type="PackedScene" path="res://Game/Game.gd" id="5_tm818"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vqc0l"]
 
