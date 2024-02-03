@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dubhea1ehbsal"]
+[gd_scene load_steps=9 format=3 uid="uid://dubhea1ehbsal"]
 
 [ext_resource type="Script" path="res://Labyrinth Dungeon Creation/labyrinth.gd" id="1_56723"]
 [ext_resource type="MeshLibrary" uid="uid://db36rsv5miw2q" path="res://Labyrinth Dungeon Creation/Labyrinth Tiles 3.25.25 .tres" id="2_v61wu"]
 [ext_resource type="Script" path="res://Labyrinth Dungeon Creation/MeshInstance3D.gd" id="3_c5o7y"]
 [ext_resource type="Script" path="res://Labyrinth Dungeon Creation/DungeonMesh.gd" id="3_rtcfc"]
 [ext_resource type="PackedScene" uid="uid://cbed6efcl7lu7" path="res://Labyrinth Dungeon Creation/imports/DunCell.tscn" id="3_sabrb"]
+[ext_resource type="PackedScene" uid="uid://c86cn5b7d71yx" path="res://Labyrinth Dungeon Creation/imports/Minotaur_v4.1textured.fbx" id="6_cgpk7"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_xx7yb"]
 size = Vector2(60, 60)
@@ -200,3 +201,5 @@ script = ExtResource("3_c5o7y")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LabyrinthMap/MeshInstance3D/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_ygqt6")
+
+[node name="Minotaur" parent="." instance=ExtResource("6_cgpk7")]
